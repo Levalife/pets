@@ -8,9 +8,7 @@ import re
 
 from config import WHOOSH_ENABLED
 
-if WHOOSH_ENABLED:
-    import flask.ext.whooshalchemy as whooshalchemy
-    whooshalchemy.whoosh_index(app, Post)
+
 
 
 ROLE_USER = 0
@@ -127,3 +125,6 @@ class Post(db.Model):
 whooshalchemy.whoosh_index(app, Post)
 
 
+if WHOOSH_ENABLED:
+    import flask.ext.whooshalchemy as whooshalchemy
+    whooshalchemy.whoosh_index(app, Post)

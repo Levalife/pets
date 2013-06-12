@@ -7,7 +7,7 @@ from app import app, db, login_manager, babel
 from models import User, Post, ROLE_USER, ROLE_ADMIN, FIRST_TIME
 from forms import UserForm, PostForm, SearchForm,EditForm
 from emails import follower_notification
-from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS, LANGUAGES
+from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS, LANGUAGES, WHOOSH_ENABLED
 from datetime import datetime
 import arrow
 
