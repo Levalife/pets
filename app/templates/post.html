@@ -1,0 +1,10 @@
+<div class='inline'>
+	
+		
+		<p>{{ post.category }}</p>
+		<p>{{ post.text }} </p>
+		<p>
+			<a href="{{ url_for('user', username=post.author.username) }}">{{ post.author.username }} </a>
+			<i class="offset1">{{ time[post.id] }} </i>
+		</p>
+</div>

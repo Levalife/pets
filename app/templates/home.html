@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+{% include 'flash.html' %}
+
+<ul class="pager">
+	{% if posts.has_prev %}
+	<li class="previous"><a href="{{ url_for('home', page = posts.prev_num) }}">Предыдущая</a></li>
+	{% else %}
+	<li class="previous disabled"><a href="#">Предыдущая</a></li>
+	{% endif %}  
+	{% if posts.has_next %}
+	<li class="next"><a href="{{ url_for('home', page = posts.next_num) }}">Следующая</a></li>
+	{% else %}
+	<li class="next disabled"><a href="#">Следующая</a></li>
+	{% endif %}
+</ul>
+{% for post in posts.items %}
+<a href="{{ url_for('post_page', id=post.id) }}"><h1>{{ post.title }}</h1></a> <br>
+{% include 'post.html' %}<br><br><br>
+
+{% endfor %}
+
+
+<ul class="pager">
+	{% if posts.has_prev %}
+	<li class="previous"><a href="{{ url_for('home', page = posts.prev_num) }}">Предыдущая</a></li>
+	{% else %}
+	<li class="previous disabled"><a href="#">Предыдущая</a></li>
+	{% endif %}  
+	{% if posts.has_next %}
+	<li class="next"><a href="{{ url_for('home', page = posts.next_num) }}">Следующая</a></li>
+	{% else %}
+	<li class="next disabled"><a href="#">Следующая</a></li>
+	{% endif %}
+</ul>
+
+{% endblock %}

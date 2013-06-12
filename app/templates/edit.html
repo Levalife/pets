@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% include 'flash.html' %}
+<h1>Изменить свои данные</h1>
+<form action="{{ url_for('edit') }}" class='form-inline' method="post">
+	{{form.hidden_tag()}}
+	
+	<p valign = top>Обо мне:</p>
+	<p align = center>{{form.about_me(cols=64, rows=4, class="span8")}} </p>
+	<input class='btn btn-inverse pull-right' type="submit" value="Сохранить изменения">
+</form>
+
+{% endblock %}

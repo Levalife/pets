@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PETsReviews</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' media="screen">
+		<link href="{{ url_for('static', filename='css/bootstrap-responsive.css') }}" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+    	<script src="{{ url_for('static', filename='/js/bootstrap.min.js')}}"></script>
+    	<script src="/static/js/moment.min.js"></script>
+    	
+		<link rel="shortcut icon" href="static/favicon.jpeg">
+		<style type="text/css">
+      		body {
+        		padding-top: 60px;
+        		padding-bottom: 40px;
+      		}
+    </style>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class='brand' a href="{{ url_for('home') }}">PETsReviews</a>
+					
+					
+					<div class="nav-collapse collapse">
+						
+						{% if not g.user.is_authenticated() %}
+						<ul class="nav">
+							<li><a href="{{ url_for('home') }}">Главная</a></li>
+							<li><a href="{{ url_for('registration') }}">Регистрация</a></li>
+						</ul>
+						<form action="{{ url_for('login') }}" method="POST" class="navbar-form pull-right">
+							<input class="span2" type="text" placeholder='Email' name=email>
+							<input class="span2" type="password" placeholder="Пароль" name=password>
+							Запомнить<input type=checkbox name=remember value=yes>
+							<button type="submit" class="btn btn-inverse"> Войти </button>
+						</form>
+						{% endif %} 
+						<ul class="nav">
+						{% if g.user.is_authenticated() %}
+							<li><a href="{{ url_for('home') }}">Главная</a></li>
+							<li><a href="{{ url_for('my_line') }}">Моя лента</a></li>
+							<li><a href="{{ url_for('add_post') }}">Создать</a></li>
+
+						</ul>
+
+						<form class='navbar-search pull-right' action="{{ url_for('search') }}"  method='POST' name=search>{{g.search_form.hidden_tag()}}{{g.search_form.search(size=20, placeholder='Поиск', class="search-query span2")}}
+						</form>
+
+						<ul class='nav pull-right'>
+							<li><a href="{{ url_for('user', username=g.user.username) }}">Профиль</a></li>
+							<li><a href="{{ url_for('logout') }}">Выйти</a></li>
+						</ul>	
+										
+						</div>
+
+					
+						{% endif %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			
+			{% block content %}
+			{% endblock %}
+		</div>
+	</body>
+</html>

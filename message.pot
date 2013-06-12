@@ -1,0 +1,100 @@
+# Translations template for PROJECT.
+# Copyright (C) 2013 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2013-06-12 13:29+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: app/views.py:52
+msgid "Email already registered."
+msgstr ""
+
+#: app/views.py:56
+msgid "Login is already exist. You can try this one: "
+msgstr ""
+
+#: app/views.py:66
+msgid "You were successfully registrated."
+msgstr ""
+
+#: app/views.py:80
+msgid "You were logged in."
+msgstr ""
+
+#: app/views.py:83 app/views.py:85
+msgid "Invalid email or password."
+msgstr ""
+
+#: app/views.py:96
+msgid "Your post successfully added."
+msgstr ""
+
+#: app/views.py:111
+msgid "Logged out."
+msgstr ""
+
+#: app/views.py:129
+msgid "Search didn't give results."
+msgstr ""
+
+#: app/views.py:140 app/views.py:201 app/views.py:223
+#, python-format
+msgid "User %(username)s not found."
+msgstr ""
+
+#: app/views.py:159 app/views.py:177
+msgid "Your changes have been saved."
+msgstr ""
+
+#: app/views.py:205
+msgid "You can't follow yourself"
+msgstr ""
+
+#: app/views.py:210
+#, python-format
+msgid "Cannot follow  %(username)s ."
+msgstr ""
+
+#: app/views.py:214
+#, python-format
+msgid "You are now following %(username)s !"
+msgstr ""
+
+#: app/views.py:226
+msgid "You can't unfollow yourself"
+msgstr ""
+
+#: app/views.py:231
+#, python-format
+msgid "Cannot unfollow  %(username)s ."
+msgstr ""
+
+#: app/views.py:235
+#, python-format
+msgid "You have stopped following %(username)s ."
+msgstr ""
+
+#: app/views.py:252
+msgid "Post don't found."
+msgstr ""
+
+#: app/views.py:255
+msgid "You cannot delete this post."
+msgstr ""
+
+#: app/views.py:259
+msgid "Your post has been deleted."
+msgstr ""
+

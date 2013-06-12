@@ -1,0 +1,5 @@
+<p>Dear {{user.username}},</p>
+<p><a href="{{url_for("user", username = follower.username, _external = True)}}">{{follower.username}}</a> is your follower now.</p>
+
+<p>Regards,</p>
+<p>The <code>petsreviews</code> admin</p>

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+{% include 'flash.html' %}
+{% for result in results %}
+<h4><a href="{{ url_for('post_page', id=result.id) }}">{{result.title }}</a></h4></br>
+<i>{{result.category}}</i></br>
+{{result.text}}</br>
+{{result.author.username}}</br>
+<p class='pull-right'>{{ time[result.id]}}</p>
+
+{% endfor %}
+{% endblock %}

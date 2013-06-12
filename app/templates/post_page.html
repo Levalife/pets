@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+	{% include 'flash.html' %}
+	
+		
+		<h1>{{ post.title }}</h1>
+		<p>{% include 'post.html' %}</p>
+		
+		{% if post.author.id == g.user.id %} 
+			<p><a href="{{ url_for('edit_post', id=post.id) }}"> Изменить сообщение</a>
+			<a href="{{ url_for('delete_post', id=post.id) }}">Удалить сообщение</a></p>
+		{% endif %}
+		
+{% endblock %}

@@ -1,0 +1,101 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2013 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2013-06-12 13:29+0300\n"
+"PO-Revision-Date: 2013-06-12 13:34+0200\n"
+"Last-Translator: Olga <levushka14@gmail.com>\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#: app/views.py:52
+msgid "Email already registered."
+msgstr "Почта уже зарегестрирована."
+
+#: app/views.py:56
+msgid "Login is already exist. You can try this one: "
+msgstr "Логин уже зарегистрирован. Попробуйте этот:"
+
+#: app/views.py:66
+msgid "You were successfully registrated."
+msgstr "Вы были успешно зарегестрированы."
+
+#: app/views.py:80
+msgid "You were logged in."
+msgstr "Вы успешно вошли."
+
+#: app/views.py:83 app/views.py:85
+msgid "Invalid email or password."
+msgstr "Неверные почта или пароль."
+
+#: app/views.py:96
+msgid "Your post successfully added."
+msgstr "Ваше сообщение успешно опубликовано."
+
+#: app/views.py:111
+msgid "Logged out."
+msgstr "Вы успешно вышли."
+
+#: app/views.py:129
+msgid "Search didn't give results."
+msgstr "Поиск не дал результатов."
+
+#: app/views.py:140 app/views.py:201 app/views.py:223
+#, python-format
+msgid "User %(username)s not found."
+msgstr "Пользователь %(username)s не найден."
+
+#: app/views.py:159 app/views.py:177
+msgid "Your changes have been saved."
+msgstr "Ваши изменения сохранены."
+
+#: app/views.py:205
+msgid "You can't follow yourself"
+msgstr "Вы не можете подписаться на себя."
+
+#: app/views.py:210
+#, python-format
+msgid "Cannot follow  %(username)s ."
+msgstr "Вы не можете подписаться на  %(username)s ."
+
+#: app/views.py:214
+#, python-format
+msgid "You are now following %(username)s !"
+msgstr "Теперь вы подписаны на %(username)s !"
+
+#: app/views.py:226
+msgid "You can't unfollow yourself"
+msgstr "Вы не можете отписаться от себя."
+
+#: app/views.py:231
+#, python-format
+msgid "Cannot unfollow  %(username)s ."
+msgstr "Вы не можете отписаться от  %(username)s ."
+
+#: app/views.py:235
+#, python-format
+msgid "You have stopped following %(username)s ."
+msgstr "Вы отписались от %(username)s ."
+
+#: app/views.py:252
+msgid "Post don't found."
+msgstr "Сообщение не найдено."
+
+#: app/views.py:255
+msgid "You cannot delete this post."
+msgstr "Вы не можете удалить это сообщение."
+
+#: app/views.py:259
+msgid "Your post has been deleted."
+msgstr "Ваше сообщение удалено."

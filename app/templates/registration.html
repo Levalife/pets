@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% include 'flash.html' %}
+
+<form class = 'inline' action="{{ url_for('registration') }}" method=post >
+	
+	<table align=center valign=middle>
+		<tr valign='top'>
+			<td>Логин</td>
+			<td>{{form.username(maxlength=64,class="span4")}}</td>
+			{% if form.username.errors %}
+			<div class='text-warning'>{% for error in form.username.errors %}
+				<p>{{ error }}</p>
+			{% endfor %}</div>
+			{% endif %}
+			
+		</tr>
+		<tr valign='top'>
+			<td>Почта:</td>
+			<td>{{form.email(maxlength=64,class="span4")}}</td>
+		</tr>
+		<tr valign='top'>
+			<td>Пароль:</td>
+			<td>{{form.password(maxlength=64,class="span4")}}</td>
+			{% if form.password.errors %}
+			<div class='text-warning'>{% for error in form.password.errors %}
+				<p>{{ error }}</p>
+			{% endfor %}</div>
+			{% endif %}
+		</tr>
+		<tr valign='top'>
+			<td>Обо мне:</td>
+			<td>{{form.about_me(cols=64, rows=5, class="span4")}}</td>
+			{% if form.about_me.errors %}
+			<div class='text-warning'>{% for error in form.about_me.errors %}
+				<p>{{ error }}</p>
+			{% endfor %}</div>
+			{% endif %}
+		</tr>
+	</table>
+	<button class='btn btn-inverse pull-right' type='submit'>Зарегистрироваться</button>
+</form>
+{% endblock %}

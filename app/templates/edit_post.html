@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% include 'flash.html' %}
+<form action="{{ url_for('edit_post', id=id) }}" method='post'>
+	{{ form.hidden_tag()}}
+	
+	<table>
+		<tr valign='top'>
+			<td class='span2'>Название:</td>
+			<td> {{ form.title}} </td>
+		</tr>
+		<tr valign='top'>
+			<td> Текст сообщения:</td>
+			<td>  {{form.text( cols = 64, rows=10)}}</td> 
+		</tr>
+		<tr valign='top'>
+			<td> Категория:</td>
+			<td> {{form.category}}</td> 
+		</tr>
+	</table>
+	<input class='btn btn-inverse pull-right' type='submit' value='Сохранить изменения'>
+</form>
+
+{% endblock %}

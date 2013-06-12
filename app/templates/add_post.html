@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% include 'flash.html' %}
+<form action="{{ url_for('add_post') }}" class='form-inline' method=post>
+	<table align="center">
+		<tr valign="top">
+			<td class='span2'>Название:</td>
+			<td> {{ form.title(size = 164, class="span8") }} </td>
+		</tr>
+	
+		<tr valign="top"><td>Текст сообщения:</td> 
+			<td>{{ form.text(cols=164, rows=10, class="span8")}}</td>
+		</tr>
+		<tr valign="top"><td>Категория:</td> 
+			<div class='btn-group'>
+				<a class='btn dropdown-toggle' data-toggle="dropdown" href="#">
+					Выберите категорию
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>Игровая</li>
+					<li>Косметика и уход</li>
+					<li>Одежда</li>
+					<a href='#'>Аксессуары</a>
+				</ul>
+			</div>
+
+			<td>{{ form.category(size = 164, class="span8") }}</td>
+		</tr>
+	</table>
+	<button class='btn btn-inverse pull-right' type="submit">Опубликовать</button>
+</form>
+{% endblock %}
+
+
