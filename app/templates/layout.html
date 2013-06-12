@@ -51,10 +51,10 @@
 							<li><a href="{{ url_for('add_post') }}">Создать</a></li>
 
 						</ul>
-
+						{% if g.search_enabled %}
 						<form class='navbar-search pull-right' action="{{ url_for('search') }}"  method='POST' name=search>{{g.search_form.hidden_tag()}}{{g.search_form.search(size=20, placeholder='Поиск', class="search-query span2")}}
 						</form>
-
+						{% endif %}
 						<ul class='nav pull-right'>
 							<li><a href="{{ url_for('user', username=g.user.username) }}">Профиль</a></li>
 							<li><a href="{{ url_for('logout') }}">Выйти</a></li>

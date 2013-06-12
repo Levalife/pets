@@ -35,3 +35,6 @@ LANGUAGES = {
 
 #pagination
 POSTS_PER_PAGE = 10
+
+# Whoosh does not work on Heroku
+WHOOSH_ENABLED = os.environ.get('HEROKU') is None

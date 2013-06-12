@@ -28,6 +28,7 @@ def before_request():
 		g.user.last_seen = datetime.utcnow()
 		db.session.add(g.user)
 		db.session.commit()
+	g.search_enabled = WHOOSH_ENABLED
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/<int:page>', methods=['GET', u'POST'])
